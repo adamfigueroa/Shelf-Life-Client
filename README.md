@@ -1,71 +1,46 @@
-# Getting Started with Create React App
+I'm going to create an app called "Expiration Tracker" that users can use to track the expiration date of purchased items.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+User Stories:
 
-## Available Scripts
+As a new user:
+I want to register an account
+I want to use a Demo account to try out the app
 
-In the project directory, you can run:
+As a user:
+I want to choose from premade items (with shelf life) from a dropdown to "My Refrigerator"
+I want to be able to add a custom item name and expiration date if I can't find my item in the dropdown
+I want my Item's background to be red when it is expired
 
-### `npm start`
+As a returning user:
+I want to see a dashboard that shows me all my saved items.
+I want to see the elements in the countdown timer automatically decrement.
+I want to be able to sort my list according to name (ascending/descending), or closest to expire (ascending/descending)
+I want to be able to delete an item
+I want to be able to edit/reset an item
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+As an admin:
+I want to view a list of users
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+-------------------------------------------------------------------------------------------
 
-### `npm test`
+https://trello.com/b/1CrHSQGx/shelf-life-app
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Trello key:
+Red = High Priority
+Yellow = Medium Priority
+Green = Low Priority
 
-### `npm run build`
+-------------------------------------------------------------------------------------------
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Wireframe link:
+https://wireframe-o3lxc4774.vercel.app/
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+***Wireframe Navigation***
+- The URL above takes you to the Homepage
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- to go to the login page click the "Login" button or navigate to (https://wireframe-o3lxc4774.vercel.app/login)
 
-### `npm run eject`
+- to go to the dashboard page click the "Login" button located @ (https://wireframe-o3lxc4774.vercel.app/login) OR navigate to (https://wireframe-o3lxc4774.vercel.app/dashboard)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- to go to the addItem page click the "Add New Item" button located @ (https://wireframe-o3lxc4774.vercel.app/dashboard) OR navigate to (https://wireframe-o3lxc4774.vercel.app/additem)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# Shelf-Life-Client

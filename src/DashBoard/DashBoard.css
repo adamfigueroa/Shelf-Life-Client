@@ -1,0 +1,60 @@
+.dashboardWindow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+  padding: 10px;
+}
+
+.dSidebar {
+  padding: 20px;
+  align-self: stretch;
+  border: 1px solid #e7e7e7;
+  background-color: #f3f3f3;
+  min-height: 100px;
+}
+
+.dashboardBox {
+  flex-grow: 2;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #e7e7e7;
+}
+
+.resultsList {
+  display: flex;
+  flex-grow: 2;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  min-width: 95%;
+}
+
+.resultsList li {
+    border: 1px solid #e7e7e7;
+    min-width: 95%;
+}
+
+.itemCard {
+    display: flex;
+  flex-grow: 2;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.expired {
+  background-color: red;
+  color: white;
+}
+
+.expanded {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}

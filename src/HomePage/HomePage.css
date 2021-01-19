@@ -1,0 +1,38 @@
+.landingPageParent {
+    display: flex;
+    margin-top: 15px;
+  }
+  
+  .landingPage1,
+  .landingPage2,
+  .signupForm {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+  }
+  
+  .signupForm {
+      min-height: 300px;
+      justify-content: space-between;
+  }
+  
+  .formBox {
+    border: 1px solid #e7e7e7;
+    border-radius: 10px;
+    background-color: #f3f3f3;
+    padding: 15px;
+  }
+  
+  footer {
+      float: right;
+      margin-right: 20px;
+      font-size: 10px
+  }
+
+  @media only screen and (max-width: 600px) {
+    .landingPageParent {
+        flex-direction: column;
+    }
+  }
+  

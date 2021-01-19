@@ -1,0 +1,12 @@
+.headerBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.headerText {
+    text-decoration: none;
+    text-align: center;
+    color: #333;
+}
