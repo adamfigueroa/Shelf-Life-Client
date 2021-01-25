@@ -1,9 +1,9 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
-import HomePage from './HomePage/HomePage'
-import LoginPage from "./LoginPage/LoginPage"
-import DashBoard from "./DashBoard/DashBoard"
-import AddItem from "./AddItem/AddItem"
+import HomePage from './components/HomePage/HomePage'
+import LoginPage from "./components/LoginPage/LoginPage"
+import DashBoard from "./components/DashBoard/DashBoard"
+import AddItem from "./components/AddItem/AddItem"
 
 
 function App() {

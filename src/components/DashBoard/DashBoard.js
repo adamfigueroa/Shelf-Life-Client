@@ -1,5 +1,5 @@
 import React from "react";
-import Header from "../Header/Header";
+import Header from "../../Header/Header";
 import { Link } from "react-router-dom";
 import "./DashBoard.css";
 
