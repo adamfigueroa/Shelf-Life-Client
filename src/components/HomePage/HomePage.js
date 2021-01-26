@@ -5,6 +5,9 @@ import "./HomePage.css";
 
 class HomePage extends Component {
 
+  registerRedirect = () => {
+    this.props.history.push('/login')
+  }
 
   render() {
     return (
@@ -55,7 +58,7 @@ class HomePage extends Component {
               vote press conference amazon prime.
             </p>
           </div>
-          <SignUpForm />
+          <SignUpForm registerRedirect={this.registerRedirect}/>
         </section>
         <footer>Copyright Adam Figueroa 2021</footer>
       </div>
