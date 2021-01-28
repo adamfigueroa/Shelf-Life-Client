@@ -18,7 +18,8 @@ class LoginForm extends Component {
       .then((res) => {
         user_name.value = "";
         password.value = "";
-        TokenService.saveAuthToken(res.token);
+        console.log(res)
+        TokenService.saveAuthToken(res.authToken);
         this.props.handleLoginSuccess();
       })
       .catch((res) => {

@@ -13,10 +13,10 @@ class Header extends Component {
     return (
       <div className="navBarLogin">
         <Link to={"/login"}>
-          <li>Login</li>
+          <li className="navbar">Login</li>
         </Link>
         <Link to={"/"}>
-          <li>Home</li>
+          <li className="navbar">Home</li>
         </Link>
       </div>
     );
@@ -25,11 +25,11 @@ class Header extends Component {
   renderLogoutBtn() {
     return (
       <div className="navBarLogout">
-        <Link to={""} onCLick={this.handleLogout}>
-          <li>Logout</li>
-        </Link>
+        <a href="#" onClick={this.handleLogout}>
+          <li className="navbar">Logout</li>
+        </a>
         <Link to={"/"}>
-          <li>Home</li>
+          <li className="navbar">Home</li>
         </Link>
       </div>
     );

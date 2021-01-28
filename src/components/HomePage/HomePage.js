@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import Header from "../Header/Header";
 import SignUpForm from "../SignUpForm/SignUpForm";
 import "./HomePage.css";
 
@@ -12,7 +11,6 @@ class HomePage extends Component {
   render() {
     return (
       <div className="homePage">
-        <Header />
         <section className="landingPageParent">
           <div className="landingPage1">
             <h2>Headline 1</h2>

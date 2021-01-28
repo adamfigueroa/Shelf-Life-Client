@@ -1,12 +1,10 @@
 import React from "react";
-import Header from "../Header/Header";
 import { Link } from "react-router-dom";
 import "./AddItem.css";
 
 const AddItem = () => {
   return (
     <section className="dashboardPage">
-      <Header />
       <div className="additemWindow">
         <div className="cancelSidebar">
           <Link to="/dashboard">

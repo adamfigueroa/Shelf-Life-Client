@@ -6,6 +6,7 @@ import HomePage from "./components/HomePage/HomePage";
 import LoginPage from "./components/LoginPage/LoginPage";
 import DashBoard from "./components/DashBoard/DashBoard";
 import AddItem from "./components/AddItem/AddItem";
+import Header from "./components/Header/Header";
 
 
 class App extends Component {
@@ -22,6 +23,7 @@ class App extends Component {
   render() {
     return (
       <main className="App">
+        <Route path="/" component={Header} />
         <Route path="/" exact component={HomePage} />
         <PublicRoute path="/login" exact component={LoginPage} />
         <PrivateRoute path="/dashboard" exact component={DashBoard} />

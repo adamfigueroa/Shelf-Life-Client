@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import Header from "../Header/Header";
 import LoginForm from "../LoginForm/LoginForm"
 import "./LoginPage.css";
 
@@ -14,7 +13,6 @@ class LoginPage extends Component {
   render() {
     return (
       <section className="loginPage">
-        <Header />
         <LoginForm handleLoginSuccess={this.handleLoginSuccess}/>
       </section>
     );
