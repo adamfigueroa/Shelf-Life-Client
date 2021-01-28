@@ -1,45 +1,69 @@
-import React from "react";
+import React, { Component } from "react";
+import AppContext from "../../context/AppContext";
+import ItemApiService from "../../services/item-api-service";
+import Moment from "react-moment"
+import moment from "moment";
 
-const DashBoardList = () => {
-  return (
-    <div className="dashboardBox">
-      <h2>My Fridge</h2>
-      <ul className="resultsList">
+class DashBoardList extends Component {
+  static contextType = AppContext;
+
+  state = {
+    error: false,
+  };
+
+  componentDidMount() {
+    this.setState({ loading: true });
+    ItemApiService.fetchUserItems()
+      .then((items) => {
+        this.context.setItems(items);
+        if (items.length < 1) {
+          this.setState({ empty: true });
+        } else {
+          this.setState({ empty: false });
+        }
+      })
+      .catch((error) => {
+        this.setState({ error });
+      });
+  }
+
+  calculateCountdownDate = (item) => {
+    const startDate = moment(`${item.count_down_date}`);
+    const addDays = item.days_until_expire
+    const newDate = startDate.add(`${addDays}`, 'days')
+    
+    const countdown = moment({newDate}, "DDMMYYYY").fromNow();
+
+    console.log(startDate)
+    console.log(newDate)
+    console.log(countdown)
+    return countdown;
+  };
+
+  loadItems = () => {
+    const userItems = this.context.items.map(item => {
+      return (
         <li>
-          <div className="itemCard">
-            <h4>Apples</h4>
-            <p className="expired">Days left: expired</p>
+          <div className="itemCard" id>
+            <h4>{item.item_name}</h4>
+            <Moment element="p" date={this.calculateCountdownDate(item)} durationFromNow/>
           </div>
         </li>
-        <li>
-          <div className="itemCard">
-            <h4>Cake</h4>
-            <p>Days left: 3</p>
-          </div>
-        </li>
-        <li>
-          <div className="itemCard">
-            <h4>Kale</h4>
-            <p>Days left: 5</p>
-          </div>
-        </li>
-        <li>
-          <div className="itemCard">
-            <h4>Bread Loaf</h4>
-            <p>Days left: 5</p>
-          </div>
-        </li>
-        <li>
-          <div className="itemCard expanded">
-            <h4>Potatoes</h4>
-            <p>7 Days 9 Hours 32 Minutes</p>
-            <button>Delete</button>
-            <button>Edit</button>
-          </div>
-        </li>
-      </ul>
-    </div>
-  );
-};
+      )
+    })
+    return userItems;
+  }
+
+  render() {
+    return (
+      <div className="dashboardBox">
+        <h2>My Fridge</h2>
+        <ul className="resultsList">
+          {this.loadItems()}
+        </ul>
+      </div>
+    );
+  }
+}
 
 export default DashBoardList;

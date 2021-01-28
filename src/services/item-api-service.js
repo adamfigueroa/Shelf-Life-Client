@@ -7,6 +7,7 @@ const ItemApiService = {
       headers: {
         "content-type": "application/json",
         authorization: `Bearer ${TokenService.fetchAuthToken()}`,
+        
       },
     })
       .then((res) => {
