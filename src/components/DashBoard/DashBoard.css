@@ -36,15 +36,26 @@
 }
 
 .resultsList li {
-    border: 1px solid #e7e7e7;
-    min-width: 95%;
+  border: 1px solid #e7e7e7;
+  min-width: 95%;
 }
 
 .itemCard {
-    display: flex;
+  display: flex;
   flex-grow: 2;
   justify-content: space-around;
   align-items: center;
+}
+
+.itemCardLi a {
+  list-style: none;
+  text-decoration: none;
+  color: #111;
+}
+
+.itemCard:hover {
+  background-color: #111;
+  color: white;
 }
 
 .expired {

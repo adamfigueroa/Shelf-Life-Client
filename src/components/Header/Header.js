@@ -28,8 +28,8 @@ class Header extends Component {
         <a href="#" onClick={this.handleLogout}>
           <li className="navbar">Logout</li>
         </a>
-        <Link to={"/"}>
-          <li className="navbar">Home</li>
+        <Link to={"/dashboard"}>
+          <li className="navbar">Dashboard</li>
         </Link>
       </div>
     );

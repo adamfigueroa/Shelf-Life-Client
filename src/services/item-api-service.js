@@ -3,12 +3,10 @@ import TokenService from "./token-service";
 
 const ItemApiService = {
   fetchUserItems() {
-    console.log(TokenService.fetchAuthToken())
     return fetch(`${config.API_ENDPOINT}/items`, {
       headers: {
         "content-type": "application/json",
         authorization: `Bearer ${TokenService.fetchAuthToken()}`,
-        
       },
     })
       .then((res) => {

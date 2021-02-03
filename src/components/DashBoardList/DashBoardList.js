@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import AppContext from "../../context/AppContext";
 import ItemApiService from "../../services/item-api-service";
-import Moment from "react-moment"
 import moment from "moment";
+import { Link } from "react-router-dom";
 
 class DashBoardList extends Component {
   static contextType = AppContext;
@@ -28,39 +28,34 @@ class DashBoardList extends Component {
   }
 
   calculateCountdownDate = (item) => {
-    const startDate = moment(`${item.count_down_date}`);
-    const addDays = item.days_until_expire
-    const newDate = startDate.add(`${addDays}`, 'days')
-    
-    const countdown = moment({newDate}, "DDMMYYYY").fromNow();
+    const addDays = item.days_until_expire;
+    const newDate = moment(item.count_down_date).add(addDays, "days");
 
-    console.log(startDate)
-    console.log(newDate)
-    console.log(countdown)
-    return countdown;
+    const countdown = newDate.fromNow();
+    return ("Expires " + countdown);
   };
 
   loadItems = () => {
-    const userItems = this.context.items.map(item => {
+    const userItems = this.context.items.map((item) => {
       return (
-        <li>
-          <div className="itemCard" id>
+        <li className="itemCardLi"  id={item.id} key={item.id}>
+          <Link to={`api/items/${item.id}`}> 
+          <div className="itemCard">
             <h4>{item.item_name}</h4>
-            <Moment element="p" date={this.calculateCountdownDate(item)} durationFromNow/>
+            {this.calculateCountdownDate(item)}
           </div>
+          </Link>
         </li>
-      )
-    })
+      );
+    });
     return userItems;
-  }
+  };
 
   render() {
     return (
       <div className="dashboardBox">
         <h2>My Fridge</h2>
-        <ul className="resultsList">
-          {this.loadItems()}
-        </ul>
+        <ul className="resultsList">{this.loadItems()}</ul>
       </div>
     );
   }
