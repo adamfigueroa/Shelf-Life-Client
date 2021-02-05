@@ -31,8 +31,7 @@ class DashBoardList extends Component {
     const addDays = item.days_until_expire;
     const newDate = moment(item.count_down_date).add(addDays, 'days');
     const countdown = newDate.fromNow();
-    const numberSnatcher = countdown.match(/\d+/)
-    if (Number(numberSnatcher) <= 0) {
+    if (countdown.includes('ago')) {
       return (
         <p className="expired">
           {item.item_name} has expired {countdown}
@@ -48,10 +47,9 @@ class DashBoardList extends Component {
       return (
         <li className="itemCardLi" id={item.id} key={item.id}>
           <Link to={`/items/${item.id}`}>
-            <div className="itemCard">
+            <div className="itemCard" title="Click here to see details">
               <h4>{item.item_name}</h4>
               {this.calculateCountdownDate(item)}
-              <button className="deleteBtn">X</button>
             </div>
           </Link>
         </li>

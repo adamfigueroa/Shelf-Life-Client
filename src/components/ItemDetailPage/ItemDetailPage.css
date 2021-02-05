@@ -45,6 +45,10 @@
   border-radius: 10px;
 }
 
+.hidden {
+  display: none;
+}
+
 @media only screen and (max-width: 414px) {
   .detailWindow {
     display: flex;

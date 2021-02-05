@@ -1,21 +1,21 @@
-import React, { Component } from "react";
-import { Link } from "react-router-dom";
-import TokenService from "../../services/token-service";
-import "./Header.css";
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import TokenService from '../../services/token-service';
+import './Header.css';
 
 class Header extends Component {
   handleLogout = () => {
     TokenService.clearAuthToken();
-    this.props.history.push("/");
+    this.props.history.push('/');
   };
 
   renderLoginBtn() {
     return (
       <div className="navBarLogin">
-        <Link to={"/login"}>
+        <Link to={'/login'}>
           <li className="navbar">Login</li>
         </Link>
-        <Link to={"/"}>
+        <Link to={'/'}>
           <li className="navbar">Home</li>
         </Link>
       </div>
@@ -25,8 +25,10 @@ class Header extends Component {
   renderLogoutBtn() {
     return (
       <div className="navBarLogout">
-          <li className="navbar" onClick={this.handleLogout}>Logout</li>
-        <Link to={"/dashboard"}>
+        <li className="navbar" onClick={this.handleLogout}>
+          Logout
+        </li>
+        <Link to={'/dashboard'}>
           <li className="navbar">Dashboard</li>
         </Link>
       </div>
