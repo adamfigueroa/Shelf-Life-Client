@@ -25,9 +25,7 @@ class Header extends Component {
   renderLogoutBtn() {
     return (
       <div className="navBarLogout">
-        <a href="#" onClick={this.handleLogout}>
-          <li className="navbar">Logout</li>
-        </a>
+          <li className="navbar" onClick={this.handleLogout}>Logout</li>
         <Link to={"/dashboard"}>
           <li className="navbar">Dashboard</li>
         </Link>

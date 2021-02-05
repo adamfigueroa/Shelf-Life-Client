@@ -8,7 +8,8 @@ import LoginPage from "./components/LoginPage/LoginPage";
 import DashBoard from "./components/DashBoard/DashBoard";
 import AddItem from "./components/AddItem/AddItem";
 import Header from "./components/Header/Header";
-import EditItemPage from "./components/EditItemPage/EditItemPage"
+import ItemDetailPage from "./components/ItemDetailPage/ItemDetailPage"
+
 
 class App extends Component {
   state = {
@@ -36,7 +37,7 @@ class App extends Component {
             <PublicRoute path="/login" exact component={LoginPage} />
             <PrivateRoute path="/dashboard" exact component={DashBoard} />
             <PrivateRoute path="/additem" exact component={AddItem} />
-            <PrivateRoute path="/items/:itemId" component={EditItemPage} />
+            <PrivateRoute path="/items/:itemId" component={ItemDetailPage} />
           </Switch>
         </AppContext.Provider>
       </main>

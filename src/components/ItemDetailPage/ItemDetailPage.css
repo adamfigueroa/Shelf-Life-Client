@@ -1,0 +1,84 @@
+.detailWindow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  margin-top: 15px;
+}
+
+.detailBox {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  min-height: 300px;
+  min-width: 80%;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.expiredBox {
+  text-align: center;
+  background-color: red;
+  color: white;
+  margin: 0 10px 0 10px;
+  padding: 8px;
+  border-radius: 10px;
+}
+
+.timerBox {
+  min-width: 100%;
+}
+
+.countDownBox {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: row;
+  min-width: 100%;
+}
+
+.clock {
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+@media only screen and (max-width: 414px) {
+  .detailWindow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 15px;
+    min-width: 100%;
+  }
+
+  .detailBox {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    min-height: 300px;
+    min-width: 100%;
+    border: 1px solid black;
+    border-radius: 10px;
+  }
+
+  .expiredBox {
+    background-color: red;
+    color: white;
+    margin: 0 10px 0 10px;
+    padding: 8px;
+    border-radius: 10px;
+  }
+
+  .countDownBox {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    min-width: 100%;
+  }
+}

@@ -1,8 +1,8 @@
-import React, { Component } from "react";
-import AppContext from "../../context/AppContext";
-import ItemApiService from "../../services/item-api-service";
-import moment from "moment";
-import { Link } from "react-router-dom";
+import React, { Component } from 'react';
+import AppContext from '../../context/AppContext';
+import ItemApiService from '../../services/item-api-service';
+import moment from 'moment';
+import { Link } from 'react-router-dom';
 
 class DashBoardList extends Component {
   static contextType = AppContext;
@@ -29,26 +29,37 @@ class DashBoardList extends Component {
 
   calculateCountdownDate = (item) => {
     const addDays = item.days_until_expire;
-    const newDate = moment(item.count_down_date).add(addDays, "days");
-
+    const newDate = moment(item.count_down_date).add(addDays, 'days');
     const countdown = newDate.fromNow();
-    return ("Expires " + countdown);
+    const numberSnatcher = countdown.match(/\d+/)
+    if (Number(numberSnatcher) <= 0) {
+      return (
+        <p className="expired">
+          {item.item_name} has expired {countdown}
+        </p>
+      );
+    } else {
+      return <p className="expireTracker">Expires {countdown}</p>;
+    }
   };
 
   loadItems = () => {
     const userItems = this.context.items.map((item) => {
       return (
-        <li className="itemCardLi"  id={item.id} key={item.id}>
-          <Link to={`api/items/${item.id}`}> 
-          <div className="itemCard">
-            <h4>{item.item_name}</h4>
-            {this.calculateCountdownDate(item)}
-          </div>
+        <li className="itemCardLi" id={item.id} key={item.id}>
+          <Link to={`/items/${item.id}`}>
+            <div className="itemCard">
+              <h4>{item.item_name}</h4>
+              {this.calculateCountdownDate(item)}
+              <button className="deleteBtn">X</button>
+            </div>
           </Link>
         </li>
       );
     });
-    return userItems;
+    if (userItems === []) {
+      return <li className="noItemsBox">No current items to track</li>;
+    } else return userItems;
   };
 
   render() {
