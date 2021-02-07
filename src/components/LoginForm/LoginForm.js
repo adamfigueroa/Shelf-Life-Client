@@ -29,7 +29,7 @@ class LoginForm extends Component {
   render() {
     return (
       <div className="loginBox">
-        <h3>Sign in</h3>
+        <h2>Sign in</h2>
         <form className="loginForm" onSubmit={this.handleLogin}>
           <label htmlFor="username">Username:</label>
           <input type="text" className="userName" name="username" required />
@@ -44,6 +44,11 @@ class LoginForm extends Component {
             Login
           </button>
         </form>
+        <div className='demoLogin'>
+          <h3>Give Shelf Life a try!</h3>
+          <p>Username: test@testerson.com</p>
+          <p>Password: Password!1</p>
+        </div>
       </div>
     );
   }

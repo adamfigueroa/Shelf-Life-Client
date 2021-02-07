@@ -8,7 +8,8 @@ import LoginPage from "./components/LoginPage/LoginPage";
 import DashBoard from "./components/DashBoard/DashBoard";
 import AddItem from "./components/AddItem/AddItem";
 import Header from "./components/Header/Header";
-import ItemDetailPage from "./components/ItemDetailPage/ItemDetailPage"
+import ItemDetailPage from "./components/ItemDetailPage/ItemDetailPage";
+import './App.css'
 
 
 class App extends Component {

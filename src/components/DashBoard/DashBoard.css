@@ -1,16 +1,19 @@
+.dashboardPage {
+  background-color: #f3f3f3;
+}
+
 .dashboardWindow {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 15px;
-  padding: 10px;
+  padding: 10px 10px 20px 10px;
 }
 
 .dSidebar {
   padding: 20px;
   align-self: stretch;
   border: 1px solid #e7e7e7;
-  background-color: #f3f3f3;
   min-height: 100px;
 }
 

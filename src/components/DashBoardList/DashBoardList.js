@@ -9,6 +9,7 @@ class DashBoardList extends Component {
 
   state = {
     error: false,
+    filter: false,
   };
 
   componentDidMount() {
@@ -31,6 +32,7 @@ class DashBoardList extends Component {
     const addDays = item.days_until_expire;
     const newDate = moment(item.count_down_date).add(addDays, 'days');
     const countdown = newDate.fromNow();
+    const sortNum = countdown.match(/\d+/);
     if (countdown.includes('ago')) {
       return (
         <p className="expired">
@@ -38,7 +40,12 @@ class DashBoardList extends Component {
         </p>
       );
     } else {
-      return <p className="expireTracker">Expires {countdown}</p>;
+      return (
+        <div>
+          <p className="expireTracker">Expires {countdown}</p>
+          <p className="sortNum hidden">{sortNum}</p>
+        </div>
+      );
     }
   };
 
@@ -60,10 +67,21 @@ class DashBoardList extends Component {
     } else return userItems;
   };
 
+  sortList = (sortType) => {};
+
   render() {
     return (
       <div className="dashboardBox">
-        <h2>My Fridge</h2>
+        <div>
+          <h2>My Fridge</h2>
+          <form className="filterList">
+            <select name="filter" id="filter">
+              <option value="">Filter list</option>
+              <option value="ascending">Ascending</option>
+              <option value="descending">Descending</option>
+            </select>
+          </form>
+        </div>
         <ul className="resultsList">{this.loadItems()}</ul>
       </div>
     );
