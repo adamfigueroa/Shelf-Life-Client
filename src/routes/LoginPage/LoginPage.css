@@ -18,3 +18,12 @@
   margin-top: 15px;
 }
 
+.loginBtn {
+  padding: 5px;
+}
+
+.loginBtn:hover{
+  background-color: #111;
+  color: white;
+}
+

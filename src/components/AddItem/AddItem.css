@@ -17,8 +17,8 @@
   .addItemBox {
     flex-grow: 2;
     display: flex;
+    justify-content: space-evenly;
     align-items: center;
-    border: 1px solid #e7e7e7;
   }
   
   .addItemForm {
@@ -29,6 +29,7 @@
     padding: 20px;
     min-height: 200px;
     border: 1px solid #e7e7e7;
+    border-radius: 10px;
   }
 
   .addCustomItemForm {
@@ -39,4 +40,65 @@
     padding: 20px;
     min-height: 200px;
     border: 1px solid #e7e7e7;
+    border-radius: 10px;
+  }
+
+  .backBtn, .addExistingItemForm, .addCustomItemBtn {
+    padding: 5px;
+  }
+
+  .backBtn:hover, .addExistingItemForm:hover, .addCustomItemBtn:hover{
+    background-color: #111;
+    color: white;
+  }
+
+  @media only screen and (max-width: 414px) {
+
+    .additemWindow {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin-top: 15px;
+      padding: 10px;
+    }
+
+    .addItemBox {
+      flex-grow: 2;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .cancelSidebar {
+      display: flex;
+      justify-content: flex-end;
+      padding: 10px 0 0 0;
+      border: none;
+      background-color: #f3f3f3;
+      min-height: 50px;
+    }
+
+    .backBtn {
+      padding: 10px 15px 10px 15px;
+      margin-bottom: 10px;
+    }
+
+    .addItemForm {
+      padding: 20px 20px 5px 20px;
+      min-height: 150px;
+      min-width: 80%;
+      margin-bottom: 10px;
+    }
+
+    .addExistingItemForm, .addCustomItemBtn {
+      padding: 10px 15px 10px 15px;
+    }
+
+    .backBtn:hover, .addExistingItemForm:hover, .addCustomItemBtn:hover{
+      background-color: none;
+      color: none;
+    }
+
   }

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import SignUpForm from '../SignUpForm/SignUpForm';
+import SignUpForm from '../../components/SignUpForm/SignUpForm';
 import './HomePage.css';
 
 class HomePage extends Component {
@@ -20,9 +20,9 @@ class HomePage extends Component {
             </p>
           </div>
 
-          <section class="container-boxes">
-            <div class="box">
-              <div class="text">
+          <section className="container-boxes">
+            <div className="box">
+              <div className="text">
                 <h3>Less Waste</h3>
                 <p>
                   Keeping track of when your food expires can help you reduce
@@ -31,15 +31,15 @@ class HomePage extends Component {
               </div>
             </div>
 
-            <div class="box">
-              <div class="text">
+            <div className="box">
+              <div className="text">
                 <h3>Save Money</h3>
                 <p>When you reduce food waste, you save money!</p>
               </div>
             </div>
 
-            <div class="box">
-              <div class="text">
+            <div className="box">
+              <div className="text">
                 <h3>Organize Meals</h3>
                 <p>
                   Simplify your meal prep by using your food that expires first!
@@ -50,7 +50,6 @@ class HomePage extends Component {
 
           <SignUpForm registerRedirect={this.registerRedirect} />
         </section>
-        <footer>Copyright Adam Figueroa 2021</footer>
       </div>
     );
   }

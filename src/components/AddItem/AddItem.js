@@ -125,7 +125,7 @@ class AddItem extends Component {
                 How many days until item expires:
               </label>
               <input type="number" className="itemNumber" name="itemnumber" />
-              <button>Add</button>
+              <button className='addCustomItemBtn'>Add</button>
             </form>
           </div>
         </div>

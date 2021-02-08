@@ -62,6 +62,7 @@ class DashBoardList extends Component {
         </li>
       );
     });
+    console.log(userItems)
     if (userItems === []) {
       return <li className="noItemsBox">No current items to track</li>;
     } else return userItems;
@@ -72,11 +73,11 @@ class DashBoardList extends Component {
   render() {
     return (
       <div className="dashboardBox">
-        <div>
+        <div className='titleBox'>
           <h2>My Fridge</h2>
           <form className="filterList">
             <select name="filter" id="filter">
-              <option value="">Filter list</option>
+              <option value="">Filter by</option>
               <option value="ascending">Ascending</option>
               <option value="descending">Descending</option>
             </select>

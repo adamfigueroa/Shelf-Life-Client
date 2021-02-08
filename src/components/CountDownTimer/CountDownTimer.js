@@ -14,7 +14,10 @@ class CountDownTimer extends React.Component {
 
   componentDidMount() {
     this.getTimeDifference(this.props.countDate, this.props.expireDays);
-    this.interval = setInterval(() => this.getTimeDifference(this.props.countDate, this.props.expireDays), 1000);
+    this.interval = setInterval(
+      () => this.getTimeDifference(this.props.countDate, this.props.expireDays),
+      1000
+    );
   }
 
   leadingZero(num) {
@@ -32,45 +35,44 @@ class CountDownTimer extends React.Component {
   }
 
   renderCheckForExpire() {
-      if(this.state.seconds < 0) {
-          clearInterval(this.interval)
-          return (
-              <div className='expiredBox'>
-                  <h3>Item: {this.props.name} has expired</h3>
-              </div>
-          )
-      } else return (
-        <div className='countDownBox'>
-          <div className="App-title">
-            Expires in:
+    if (this.state.seconds < 0) {
+      clearInterval(this.interval);
+      return (
+        <div className="expiredBox">
+          <h3>Item: {this.props.name} has expired</h3>
+        </div>
+      );
+    } else
+      return (
+        <div className="countDownBox">
+          <div className="clockDays">
+            {this.leadingZero(this.state.days)}
+            <div className="days">{this.state.days === 1 ? 'day' : 'days'}</div>
           </div>
-          <div className="clock">
-            {this.leadingZero(this.state.days)}{' '}
-            {this.state.days === 1 ? 'day' : 'days'}
+          <div className="clockHours">
+            {this.leadingZero(this.state.hours)}
+            <div className="hours">
+              {this.state.hours === 1 ? 'hour' : 'hours'}
+            </div>
           </div>
-          <div className="clock">
-            {this.leadingZero(this.state.hours)}{' '}
-            {this.state.hours === 1 ? 'hour' : 'hours'}
+          <div className="clockMinutes">
+            {this.leadingZero(this.state.minutes)}
+            <div className="minutes">
+              {this.state.minutes === 1 ? 'minute' : 'minutes'}
+            </div>
           </div>
-          <div className="clock">
-            {this.leadingZero(this.state.minutes)}{' '}
-            {this.state.minutes === 1 ? 'minute' : 'minutes'}
-          </div>
-          <div className="clock">
-            {this.leadingZero(this.state.seconds)}{' '}
-            {this.state.seconds === 1 ? 'second' : 'seconds'}
+          <div className="clockSeconds">
+            {this.leadingZero(this.state.seconds)}
+            <div className="minutes">
+              {this.state.seconds === 1 ? 'second' : 'seconds'}
+            </div>
           </div>
         </div>
       );
   }
 
   render() {
-
-    return (
-      <div className='timerBox'>
-        {this.renderCheckForExpire()}
-      </div>
-    );
+    return <div className="timerBox">{this.renderCheckForExpire()}</div>;
   }
 }
 

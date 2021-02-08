@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ItemApiService from '../../services/item-api-service';
-import CountDownTimer from '../CountDownTimer/CountDownTimer';
+import CountDownTimer from '../../components/CountDownTimer/CountDownTimer';
 import './ItemDetailPage.css';
 
 class ItemDetailPage extends Component {

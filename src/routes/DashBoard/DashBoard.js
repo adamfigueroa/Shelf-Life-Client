@@ -1,6 +1,6 @@
 import React from "react";
-import DashSideBar from "../DashBoardSidebar/DashSideBar";
-import DashBoardList from "../DashBoardList/DashBoardList";
+import DashSideBar from "../../components/DashBoardSidebar/DashSideBar";
+import DashBoardList from "../../components/DashBoardList/DashBoardList";
 import "./DashBoard.css";
 
 const DashBoard = () => {
