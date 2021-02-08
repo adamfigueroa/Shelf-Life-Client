@@ -35,13 +35,23 @@ class CountDownTimer extends React.Component {
   }
 
   renderCheckForExpire() {
-    if (this.state.seconds < 0) {
+    if (this.state.seconds < 0 && this.props.isEdited === false) {
       clearInterval(this.interval);
-      return (
-        <div className="expiredBox">
-          <h3>Item: {this.props.name} has expired</h3>
-        </div>
-      );
+      const iName = this.props.name;
+      const iNameSlice = iName.slice(-1)
+      if (iNameSlice === 's') {
+        return (
+          <div className="expiredBox">
+            <h3>Item: {this.props.name} have expired</h3>
+          </div>
+        );
+      } else {
+        return (
+          <div className="expiredBox">
+            <h3>Item: {this.props.name} has expired</h3>
+          </div>
+        );
+      }
     } else
       return (
         <div className="countDownBox">

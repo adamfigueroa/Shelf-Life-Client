@@ -99,9 +99,7 @@ class ItemDetailPage extends Component {
             id="name"
             required
             onChange={(event) => this.handleFormChange(event)}
-          >
-            {/* {this.state.name} */}
-          </input>
+          />
           <label htmlFor="expireDays">How many days until item expires:</label>
           <input
             type="number"
@@ -127,6 +125,7 @@ class ItemDetailPage extends Component {
             name={this.state.name}
             expireDays={this.state.expireDays}
             countDate={this.state.countDate}
+            isEdited={this.state.showEditForm}
           />
           {popup}
           <div className={this.state.btnBar} ref={this.divRef}>

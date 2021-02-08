@@ -34,11 +34,21 @@ class DashBoardList extends Component {
     const countdown = newDate.fromNow();
     const sortNum = countdown.match(/\d+/);
     if (countdown.includes('ago')) {
-      return (
-        <p className="expired">
+      const iName = item.item_name;
+      const iNameSlice = iName.slice(-1)
+      if (iNameSlice === 's') {
+        return (
+          <p className="expired">
+          {item.item_name} have expired {countdown}
+        </p>
+        );
+      } else {
+        return (
+          <p className="expired">
           {item.item_name} has expired {countdown}
         </p>
-      );
+        );
+      }
     } else {
       return (
         <div>
