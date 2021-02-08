@@ -6,7 +6,7 @@ import AppContext from "./context/AppContext";
 import HomePage from "./routes/HomePage/HomePage";
 import LoginPage from "./routes/LoginPage/LoginPage";
 import DashBoard from "./routes/DashBoard/DashBoard";
-import AddItem from "./components/AddItem/AddItem";
+import AddItem from "./routes/AddItem/AddItem";
 import Header from "./components/Header/Header";
 import ItemDetailPage from "./routes/ItemDetailPage/ItemDetailPage";
 import Footer from './components/Footer/Footer'

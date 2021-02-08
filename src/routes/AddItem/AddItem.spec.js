@@ -1,14 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
-import { BrowserRouter } from 'react-router-dom';
+import AddItem from './AddItem';
+import { BrowserRouter, Route } from 'react-router-dom';
 
-describe('App', () => {
+describe('AddItem component', () => {
   it('renders without crashing', () => {
     const div = document.createElement('div');
     ReactDOM.render(
       <BrowserRouter>
-        <App />
+        <Route path="/additem" exact component={AddItem} />
       </BrowserRouter>,
       div
     );

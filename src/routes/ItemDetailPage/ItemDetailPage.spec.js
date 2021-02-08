@@ -1,14 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
-import { BrowserRouter } from 'react-router-dom';
+import ItemDetailPage from './ItemDetailPage';
+import { BrowserRouter, Route } from 'react-router-dom';
 
-describe('App', () => {
+describe('ItemDetailPage component', () => {
   it('renders without crashing', () => {
     const div = document.createElement('div');
     ReactDOM.render(
       <BrowserRouter>
-        <App />
+        <Route path={'/items/:itemId'} component={ItemDetailPage} />
       </BrowserRouter>,
       div
     );
