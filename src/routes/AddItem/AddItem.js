@@ -120,7 +120,7 @@ class AddItem extends Component {
               onSubmit={this.handleItemSubmit}
             >
               <label htmlFor="customitem">Add a new item:</label>
-              <input type="text" className="itemName" name="customitem" />
+              <input type="text" className="itemName" name="customitem" placeholder="Name here"/>
               <label htmlFor="itemnumber">
                 How many days until item expires:
               </label>
