@@ -28,6 +28,7 @@ class DashBoardList extends Component {
       });
   }
 
+  // Add days to expire + countdown date to determine which date to countdown from, then check to see if it is expired.
   calculateCountdownDate = (item) => {
     const addDays = item.days_until_expire;
     const newDate = moment(item.count_down_date).add(addDays, 'days');

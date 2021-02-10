@@ -12,6 +12,21 @@ Shelf Life is a CRUD app that you can use to track expiration dates. Users can a
 
 ![alt text](https://github.com/adamfigueroa/Shelf-Life-Client/blob/main/src/images/sl-screenshot2.png)
 
+# Technology used
+1. HTML as JSX
+2. CSS
+3. React.js
+4. Node.js
+5. Express
+6. PostgreSQL
+7. Javascript
+8. Moment.js
+
+To install locally
+- Clone the github repo to your machine.
+- Run 'npm install' in git
+- Run 'npm start'
+
 
 
 

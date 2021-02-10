@@ -43,6 +43,8 @@
     border-radius: 10px;
   }
 
+  /* ------------------- Buttons ------------------------ */
+
   .backBtn, .addExistingItemForm, .addCustomItemBtn {
     padding: 5px;
   }
@@ -51,6 +53,8 @@
     background-color: #111;
     color: white;
   }
+
+  /* ---------------------- Media Rules ------------------ */
 
   @media only screen and (max-width: 414px) {
 

@@ -39,6 +39,8 @@
   border: 1px solid #e7e7e7;
 }
 
+/* ---------------------- Item List Styling ---------------- */
+
 .resultsList {
   display: flex;
   flex-grow: 2;
@@ -74,12 +76,15 @@
   color: white;
 }
 
+/* ---------------------- Expired Box ------------------------ */
+
 .expired {
   background-color: red;
   color: white;
 }
 
 
+/* ------------------------- Media Rules ----------------------- */
 
 @media only screen and (max-width: 414px) {
   .dashboardWindow {

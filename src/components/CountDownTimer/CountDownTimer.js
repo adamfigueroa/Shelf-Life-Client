@@ -34,6 +34,7 @@ class CountDownTimer extends React.Component {
     this.setState({ days, hours, minutes, seconds });
   }
 
+  // on render, determine if the item is expired and return the proper Div
   renderCheckForExpire() {
     if (this.state.seconds < 0 && this.props.isEdited === false) {
       clearInterval(this.interval);
