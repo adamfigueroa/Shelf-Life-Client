@@ -10,6 +10,8 @@ Shelf Life is a CRUD app that you can use to track expiration dates. Users can a
 
 ![alt text](https://github.com/adamfigueroa/Shelf-Life-Client/blob/main/src/images/sl-screenshot.png)
 
+![alt text](https://github.com/adamfigueroa/Shelf-Life-Client/blob/main/src/images/sl-screenshot2.png)
+
 
 
 
