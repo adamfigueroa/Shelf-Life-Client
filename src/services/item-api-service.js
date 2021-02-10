@@ -72,7 +72,6 @@ const ItemApiService = {
   },
 
   editItem(item, id) {
-    console.log(item, id)
     return fetch(`${config.API_ENDPOINT}/items/${id}`, {
       method: "PATCH",
       headers: {

@@ -33,7 +33,6 @@ class ItemDetailPage extends Component {
         this.onDeleteNote();
       })
       .catch((error) => {
-        console.log('catch error', error);
         console.error({ error });
       });
   };
@@ -72,7 +71,6 @@ class ItemDetailPage extends Component {
     };
     ItemApiService.editItem(editedItem, itemId)
       .then((res) => {
-        console.log(res)
         if (res) {
           this.closePopupHandler();
         } else {
